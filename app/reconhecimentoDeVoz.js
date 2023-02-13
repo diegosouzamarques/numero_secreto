@@ -10,11 +10,12 @@ const exiberChute = (chute)=>{
     <span class="box">${chute}</span>
 
     `
+    verificaChuteNumeroValido(chute);
 }
 
 const onSpeak = (evt) =>{
     const chute = evt.results[0][0].transcript;
-    console.log(chute);
+    exiberChute(chute);
 }
 
 const recognition = new SpeechRecognition();
